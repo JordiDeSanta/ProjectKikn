@@ -1,7 +1,7 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "ProjectKikGameMode.h"
-#include "ProjectKikCharacter.h"
+#include "PlayerCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 AProjectKikGameMode::AProjectKikGameMode()

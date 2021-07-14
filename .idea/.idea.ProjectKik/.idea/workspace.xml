@@ -4,22 +4,49 @@
     <projectFile>Intermediate/ProjectFiles/ProjectKik.vcxproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00b97f8d-8f55-45b5-8281-5fd22804c652" name="Default Changelist" comment="" />
+    <list default="true" id="00b97f8d-8f55-45b5-8281-5fd22804c652" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ProjectKik/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ProjectKik/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectKik/PlayerCharacter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/ProjectKik/PlayerCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectKik/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectKik/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectKik/ProjectKikCharacter.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/ProjectKik/ProjectKikCharacter.h" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Source/ProjectKik/ProjectKikCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectKik/PlayerCharacter.h" />
+      <option value="$PROJECT_DIR$/Source/ProjectKik/PlayerCharacter.cpp" />
+    </changedPaths>
+  </component>
   <component name="ProjectId" id="1vEcfGkYwKZczGjKe7jg741T86R" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -189,13 +216,31 @@
       <option name="presentableId" value="Default" />
       <updated>1626130797989</updated>
       <workItem from="1626130811097" duration="64000" />
+      <workItem from="1626226983213" duration="315000" />
+      <workItem from="1626227340766" duration="5000" />
+      <workItem from="1626227490135" duration="907000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
 </project>

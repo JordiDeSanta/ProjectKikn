@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
-#include "ProjectKikCharacter.generated.h"
+#include "PlayerCharacter.generated.h"
 
 UCLASS(config=Game)
 class AProjectKikCharacter : public ACharacter
