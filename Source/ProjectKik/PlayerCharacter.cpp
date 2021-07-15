@@ -12,7 +12,7 @@
 //////////////////////////////////////////////////////////////////////////
 // AProjectKikCharacter
 
-AProjectKikCharacter::AProjectKikCharacter()
+APlayerCharacter::APlayerCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
@@ -50,34 +50,34 @@ AProjectKikCharacter::AProjectKikCharacter()
 //////////////////////////////////////////////////////////////////////////
 // Input
 
-void AProjectKikCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
+void APlayerCharacter::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
-	PlayerInputComponent->BindAxis("MoveForward", this, &AProjectKikCharacter::MoveForward);
-	PlayerInputComponent->BindAxis("MoveRight", this, &AProjectKikCharacter::MoveRight);
+	PlayerInputComponent->BindAxis("MoveForward", this, &APlayerCharacter::MoveForward);
+	PlayerInputComponent->BindAxis("MoveRight", this, &APlayerCharacter::MoveRight);
 
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
 	PlayerInputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("TurnRate", this, &AProjectKikCharacter::TurnAtRate);
+	PlayerInputComponent->BindAxis("TurnRate", this, &APlayerCharacter::TurnAtRate);
 	PlayerInputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
-	PlayerInputComponent->BindAxis("LookUpRate", this, &AProjectKikCharacter::LookUpAtRate);
+	PlayerInputComponent->BindAxis("LookUpRate", this, &APlayerCharacter::LookUpAtRate);
 
 	// handle touch devices
-	PlayerInputComponent->BindTouch(IE_Pressed, this, &AProjectKikCharacter::TouchStarted);
-	PlayerInputComponent->BindTouch(IE_Released, this, &AProjectKikCharacter::TouchStopped);
+	PlayerInputComponent->BindTouch(IE_Pressed, this, &APlayerCharacter::TouchStarted);
+	PlayerInputComponent->BindTouch(IE_Released, this, &APlayerCharacter::TouchStopped);
 
 	// VR headset functionality
-	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &AProjectKikCharacter::OnResetVR);
+	PlayerInputComponent->BindAction("ResetVR", IE_Pressed, this, &APlayerCharacter::OnResetVR);
 }
 
 
-void AProjectKikCharacter::OnResetVR()
+void APlayerCharacter::OnResetVR()
 {
 	// If ProjectKik is added to a project via 'Add Feature' in the Unreal Editor the dependency on HeadMountedDisplay in ProjectKik.Build.cs is not automatically propagated
 	// and a linker error will result.
@@ -88,29 +88,29 @@ void AProjectKikCharacter::OnResetVR()
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
 }
 
-void AProjectKikCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
+void APlayerCharacter::TouchStarted(ETouchIndex::Type FingerIndex, FVector Location)
 {
 		Jump();
 }
 
-void AProjectKikCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
+void APlayerCharacter::TouchStopped(ETouchIndex::Type FingerIndex, FVector Location)
 {
 		StopJumping();
 }
 
-void AProjectKikCharacter::TurnAtRate(float Rate)
+void APlayerCharacter::TurnAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
-void AProjectKikCharacter::LookUpAtRate(float Rate)
+void APlayerCharacter::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
 
-void AProjectKikCharacter::MoveForward(float Value)
+void APlayerCharacter::MoveForward(float Value)
 {
 	if ((Controller != nullptr) && (Value != 0.0f))
 	{
@@ -124,7 +124,7 @@ void AProjectKikCharacter::MoveForward(float Value)
 	}
 }
 
-void AProjectKikCharacter::MoveRight(float Value)
+void APlayerCharacter::MoveRight(float Value)
 {
 	if ( (Controller != nullptr) && (Value != 0.0f) )
 	{
